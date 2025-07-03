@@ -8,7 +8,7 @@ import { Bindings } from "hono/types";
 export const userRouter =new Hono()
 
 
-userRouter.post("/api/v1/signin", async(c) => {
+userRouter.post("/signin", async(c) => {
     const body  = await c.req.json() ;
     const prisma = new PrismaClient({
       //@ts-ignore
@@ -35,7 +35,7 @@ userRouter.post("/api/v1/signin", async(c) => {
     }
   });
   
-  userRouter.post("/api/v1/signup", async (c) => {
+  userRouter.post("/signup", async (c) => {
     const body = await c.req.json();
     
     const prisma = new PrismaClient({
