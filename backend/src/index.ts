@@ -1,38 +1,16 @@
 import { Hono } from "hono";
-import { PrismaClient } from '@prisma/client/edge'
-import { withAccelerate } from '@prisma/extension-accelerate'
+import {userRouter} from "../src/routes/user"
+import { blogRouter } from "./routes/blog";
+const app = new Hono()
 
 
-const app = new Hono();
+app.route("/api/v1/user",userRouter);
+app.route("/api/v1/blog",blogRouter);
 
 
-//home component
 app.get("/", (c) => {
-  const prisma = new PrismaClient({
-    datasourceUrl: c.env.get("DATABASE_URL"),
-  }).$extends(withAccelerate())
   return c.text("Hello Hono!");
 });
-
-
-
-app.post("/api/v1/signin",(c)=>{
-  return c.text("post the sign in")
-})
-app.post("/api/v1/signup",(c)=>{
-  return c.text("post the sign up ")
-})
-app.post("/api/v1/blogs",(c)=>{
-  return c.text("post the blog info ")
-})
-app.put("/api/v1/blogs",(c)=>{
-  return c.text("update the blog info ")
-})
-// Fix the typo in the route path for getting blogs
-app.get("/api/blogs/:id", (c) => {
-  return c.text("get blogs");
-});
-
 
 
 

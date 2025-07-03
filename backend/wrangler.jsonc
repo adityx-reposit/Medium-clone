@@ -8,8 +8,8 @@
   // ],
 
   "vars": {
-    "DATABASE_URL": "postgresql://neondb_owner:npg_dIzOoMa9cT5j@ep-noisy-meadow-a8u2oj6e-pooler.eastus2.azure.neon.tech/neondb?sslmode=require&channel_binding=require"
-  },
+    "DATABASE_URL": "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWjhDOTVGN0U5WTVSOFM5QVFZUFpRQzEiLCJ0ZW5hbnRfaWQiOiI1MjYwNGI2NjM4MjdjYWMxMDU3MmY3MDNkZDU5ODljZWZlZTJiZTJiNGRhZDFjNzE2ZGRhYjc3NGQzMjRkODNmIiwiaW50ZXJuYWxfc2VjcmV0IjoiNTE3NDVlNmUtZmFjMS00Y2RhLWJjYmYtYzczNmFlNDM2MGMxIn0.0blEdUuyF28HiQCWkbEf0JwympT9H-3xalIScAWeD5k",
+    "JWT_SECRET":"adityaa"
  
-
+  }
 }
