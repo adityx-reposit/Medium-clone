@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-03",
+  // "compatibility_flags": [
+  //   "nodejs_compat"
+  // ],
+
+  "vars": {
+    "DATABASE_URL": "postgresql://neondb_owner:npg_dIzOoMa9cT5j@ep-noisy-meadow-a8u2oj6e-pooler.eastus2.azure.neon.tech/neondb?sslmode=require&channel_binding=require"
+  },
+ 
+
+}
